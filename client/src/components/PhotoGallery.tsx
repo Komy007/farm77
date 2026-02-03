@@ -186,33 +186,32 @@ export default function PhotoGallery() {
             {t(translations.photoGalleryDescription)}
           </p>
         </div>
-        
+
         {/* Photo Categories */}
         <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6 sm:mb-8 px-4">
           {filters.map(filter => (
             <button
               key={filter.key}
               onClick={() => setActiveFilter(filter.key)}
-              className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors ${
-                activeFilter === filter.key
+              className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors ${activeFilter === filter.key
                   ? 'bg-farm-green text-white'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
+                }`}
               data-testid={`filter-${filter.key}`}
             >
               {filter.label}
             </button>
           ))}
         </div>
-        
+
         {/* Photo Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-4">
           {filteredPhotos.map(photo => (
             <div key={photo.id} className="hover-lift animate-fade-in" data-testid={`photo-${photo.id}`}>
               <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
-                <img 
-                  src={photo.src} 
-                  alt={photo.alt} 
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
                   className="w-full h-40 sm:h-48 object-cover"
                   loading="lazy"
                 />
@@ -226,16 +225,14 @@ export default function PhotoGallery() {
             </div>
           ))}
         </div>
-        
+
         {/* Photo Gallery Note */}
         <div className="mt-8 sm:mt-12 text-center px-4">
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 sm:p-6 max-w-2xl mx-auto">
             <i className="fas fa-info-circle text-blue-600 text-xl sm:text-2xl mb-2 sm:mb-3"></i>
-            <h3 className="font-semibold text-blue-900 mb-1 sm:mb-2 text-sm sm:text-base">사진 갤러리 안내</h3>
+            <h3 className="font-semibold text-blue-900 mb-1 sm:mb-2 text-sm sm:text-base">{t(translations.galleryNote)}</h3>
             <p className="text-blue-700 text-xs sm:text-sm">
-              실제 농장 사진은 현장 방문 시 촬영되어 업데이트됩니다. 더 많은 고해상도 사진이 필요하시면 연락주세요.
-              <br className="hidden sm:block" />
-              <span className="text-xs">Actual farm photos will be updated after site visit. Contact us if you need more high-resolution images.</span>
+              {t(translations.galleryDesc)}
             </p>
           </div>
         </div>

@@ -25,16 +25,13 @@ export default function LocationSection() {
               </h3>
               <div className="space-y-2 sm:space-y-3">
                 <div className="flex items-center text-sm sm:text-base">
-                  <i className="fas fa-expand-arrows-alt w-5 sm:w-6 text-golden"></i>
-                  <span data-testid="text-farm-area" className="ml-2">총면적: 77헥타르 637㎡ (Total: 77ha 0637㎡)</span>
+                  <span data-testid="text-farm-area" className="ml-2">{t(translations.totalArea)}: {t(translations.totalAreaValue)}</span>
                 </div>
                 <div className="flex items-center text-sm sm:text-base">
-                  <i className="fas fa-road w-5 sm:w-6 text-golden"></i>
-                  <span className="ml-2">국도 5번 인접 (Adjacent to National Road 5)</span>
+                  <span className="ml-2">5번 국도 (National Road 5)</span>
                 </div>
                 <div className="flex items-center text-sm sm:text-base">
-                  <i className="fas fa-clock w-5 sm:w-6 text-golden"></i>
-                  <span className="ml-2">프놈펜에서 1시간 47분 (1h 47m from Phnom Penh)</span>
+                  <span className="ml-2">{t(translations.fromPhnomPenh)} {t(translations.durationValue)}</span>
                 </div>
               </div>
             </div>
@@ -43,7 +40,7 @@ export default function LocationSection() {
               <div className="bg-sky-blue/10 p-4 sm:p-6 rounded-xl border border-sky-blue/20">
                 <i className="fas fa-route text-sky-blue text-xl sm:text-2xl mb-2 sm:mb-3"></i>
                 <h4 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">{t(translations.transportAccess)}</h4>
-                <p className="text-xs sm:text-sm text-gray-600 mb-3">국도 5번 직접 연결로 뛰어난 접근성</p>
+                <p className="text-xs sm:text-sm text-gray-600 mb-3">{t(translations.directAccess)}</p>
                 <button
                   onClick={async () => {
                     try {
@@ -80,7 +77,7 @@ export default function LocationSection() {
               <div className="bg-farm-green/10 p-4 sm:p-6 rounded-xl border border-farm-green/20">
                 <i className="fas fa-leaf text-farm-green text-xl sm:text-2xl mb-2 sm:mb-3"></i>
                 <h4 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">{t(translations.farmingEnvironment)}</h4>
-                <p className="text-xs sm:text-sm text-gray-600">비옥한 토양과 우수한 수자원</p>
+                <p className="text-xs sm:text-sm text-gray-600">{t(translations.farmingDesc)}</p>
               </div>
             </div>
           </div>
@@ -119,7 +116,7 @@ export default function LocationSection() {
                 data-testid="button-google-maps"
               >
                 <i className="fas fa-external-link-alt mr-2"></i>
-                <span className="text-xs sm:text-sm font-medium">구글지도에서 보기</span>
+                <span className="text-xs sm:text-sm font-medium">{t(translations.viewGoogleMaps)}</span>
               </a>
             </div>
           </div>

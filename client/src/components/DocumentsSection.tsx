@@ -168,7 +168,7 @@ export default function DocumentsSection() {
                 </div>
               </div>
               <div className="mt-3 text-xs opacity-75">
-                <i className="fas fa-mouse-pointer mr-1"></i>클릭하여 문서 보기
+                <i className="fas fa-mouse-pointer mr-1"></i>{t(translations.clickToView)}
               </div>
             </div>
 
@@ -185,7 +185,7 @@ export default function DocumentsSection() {
                 </div>
               </div>
               <div className="mt-3 text-xs text-gray-600">
-                <i className="fas fa-mouse-pointer mr-1"></i>클릭하여 문서 보기
+                <i className="fas fa-mouse-pointer mr-1"></i>{t(translations.clickToView)}
               </div>
             </div>
 
@@ -195,7 +195,7 @@ export default function DocumentsSection() {
           <div className="space-y-4 sm:space-y-6">
             <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6">
               <i className="fas fa-eye text-farm-green mr-2"></i>
-              문서 뷰어 Document Viewer
+              {t(translations.docViewer)}
             </h3>
 
             <div className="bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
@@ -205,7 +205,7 @@ export default function DocumentsSection() {
                   <div className="mb-4">
                     <div className="flex items-center justify-between mb-3">
                       <div>
-                        <h4 className="font-bold text-lg text-gray-900 mb-1">캄보디아 토지 소유권 증서 완전본</h4>
+                        <h4 className="font-bold text-lg text-gray-900 mb-1">{t(translations.landTitleComplete)}</h4>
                         <p className="text-sm text-gray-600">Cambodia Land Title Certificate - Complete 16 Pages</p>
                       </div>
 
@@ -214,20 +214,20 @@ export default function DocumentsSection() {
                         <button
                           onClick={() => setShowBackSide(false)}
                           className={`px-3 py-1 text-sm font-medium rounded-md transition-all ${!showBackSide
-                              ? 'bg-white text-blue-600 shadow-sm'
-                              : 'text-gray-600 hover:text-gray-900'
+                            ? 'bg-white text-blue-600 shadow-sm'
+                            : 'text-gray-600 hover:text-gray-900'
                             }`}
                         >
-                          앞면 Front
+                          {t(translations.front)}
                         </button>
                         <button
                           onClick={() => setShowBackSide(true)}
                           className={`px-3 py-1 text-sm font-medium rounded-md transition-all ${showBackSide
-                              ? 'bg-white text-blue-600 shadow-sm'
-                              : 'text-gray-600 hover:text-gray-900'
+                            ? 'bg-white text-blue-600 shadow-sm'
+                            : 'text-gray-600 hover:text-gray-900'
                             }`}
                         >
-                          뒷면 Back
+                          {t(translations.back)}
                         </button>
                       </div>
                     </div>
@@ -275,7 +275,7 @@ export default function DocumentsSection() {
                   <div className="mt-4 p-3 bg-blue-50 rounded-lg">
                     <h5 className="font-semibold text-blue-800 mb-2">
                       <i className="fas fa-info-circle mr-2"></i>
-                      토지 증서 분석 Land Title Analysis
+                      {t(translations.landTitleAnalysis)}
                     </h5>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-blue-700">
                       <div>
@@ -324,7 +324,7 @@ export default function DocumentsSection() {
                   <div className="mt-4 p-3 bg-sky-50 rounded-lg">
                     <h5 className="font-semibold text-sky-800 mb-2">
                       <i className="fas fa-info-circle mr-2"></i>
-                      측량 문서 정보 Survey Information
+                      {t(translations.surveyInfo)}
                     </h5>
                     <div className="text-sm text-sky-700">
                       <p className="font-medium mb-1">• 정밀 측량을 통한 토지 경계 확정</p>
@@ -339,8 +339,8 @@ export default function DocumentsSection() {
                 <div className="bg-gradient-to-br from-gray-300 to-gray-400 h-64 sm:h-96 flex items-center justify-center">
                   <div className="text-center text-gray-600 p-4">
                     <i className="fas fa-file-pdf text-4xl sm:text-6xl mb-3 sm:mb-4"></i>
-                    <p className="text-base sm:text-lg font-semibold">문서 뷰어</p>
-                    <p className="text-xs sm:text-sm mt-1">왼쪽 문서 카테고리를 클릭하여 문서를 확인하세요</p>
+                    <p className="text-base sm:text-lg font-semibold">{t(translations.docViewer)}</p>
+                    <p className="text-xs sm:text-sm mt-1">{t(translations.selectDoc)}</p>
                   </div>
                 </div>
               )}
@@ -365,13 +365,13 @@ export default function DocumentsSection() {
                         className="bg-farm-green text-white px-2 sm:px-3 py-1 rounded text-xs sm:text-sm hover:bg-deep-green transition-colors"
                         data-testid="button-download-doc"
                       >
-                        <i className="fas fa-download mr-1"></i>다운로드
+                        <i className="fas fa-download mr-1"></i>{t(translations.download)}
                       </button>
                       <button
                         className="bg-gray-200 text-gray-700 px-2 sm:px-3 py-1 rounded text-xs sm:text-sm hover:bg-gray-300 transition-colors"
                         data-testid="button-fullscreen-doc"
                       >
-                        <i className="fas fa-expand mr-1"></i>전체화면
+                        <i className="fas fa-expand mr-1"></i>{t(translations.fullscreen)}
                       </button>
                     </div>
                   )}

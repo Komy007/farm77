@@ -59,11 +59,7 @@ export default app;
   // ONLY listen if explicitly requested or not in Vercel environment
   if (process.env.NODE_ENV !== "production" || process.env.VERCEL !== "1") {
     const port = parseInt(process.env.PORT || '5000', 10);
-    server.listen({
-      port,
-      host: "0.0.0.0",
-      reusePort: true,
-    }, () => {
+    server.listen(port, "0.0.0.0", () => {
       log(`serving on port ${port}`);
     });
   }

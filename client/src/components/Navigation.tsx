@@ -37,8 +37,8 @@ export default function Navigation() {
           <div className="flex justify-between items-center h-12 sm:h-14">
             {/* 작은 로고 */}
             <div className="flex items-center">
-              <button 
-                onClick={() => scrollToSection('home')} 
+              <button
+                onClick={() => scrollToSection('home')}
                 className="flex items-center font-bold text-sm sm:text-base text-gray-900"
                 data-testid="logo-link"
               >
@@ -46,19 +46,19 @@ export default function Navigation() {
                 <span className="hidden sm:inline">홈</span>
               </button>
             </div>
-            
+
             {/* 첨부 이미지 스타일의 컴팩트 네비게이션 */}
             <div className="flex items-center space-x-2 sm:space-x-4">
-              <button 
-                onClick={() => scrollToSection('location')} 
+              <button
+                onClick={() => scrollToSection('location')}
                 className="flex items-center text-xs sm:text-sm text-gray-700 hover:text-farm-green font-medium transition-colors px-2 py-1"
                 data-testid="nav-location"
               >
                 <i className="fas fa-map-marker-alt mr-1"></i>
                 <span className="hidden sm:inline">위치</span>
               </button>
-              
-              <button 
+
+              <button
                 onClick={() => scrollToSection('gallery')}
                 className="flex items-center text-xs sm:text-sm text-gray-700 hover:text-farm-green font-medium transition-colors px-2 py-1"
                 data-testid="nav-gallery"
@@ -66,31 +66,36 @@ export default function Navigation() {
                 <i className="fas fa-images mr-1"></i>
                 <span className="hidden sm:inline">사진</span>
               </button>
-              
-              <button 
-                onClick={() => scrollToSection('documents')} 
+
+              <button
+                onClick={() => scrollToSection('documents')}
                 className="flex items-center text-xs sm:text-sm text-gray-700 hover:text-farm-green font-medium transition-colors px-2 py-1"
                 data-testid="nav-documents"
               >
                 <i className="fas fa-file-alt mr-1"></i>
                 <span className="hidden sm:inline">서류</span>
               </button>
-              
+
               {/* 연락처 버튼을 초록색으로 강조 */}
-              <button 
-                onClick={() => scrollToSection('contact')} 
+              <button
+                onClick={() => scrollToSection('contact')}
                 className="bg-green-600 hover:bg-green-700 text-white px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-colors flex items-center"
                 data-testid="nav-contact"
               >
                 <i className="fas fa-phone mr-1"></i>
                 연락처
               </button>
+
+              {/* Desktop Language Selector */}
+              <div className="hidden md:block ml-2">
+                <LanguageSelector />
+              </div>
             </div>
-            
+
             {/* Mobile Language Selector & Menu */}
             <div className="md:hidden flex items-center space-x-3">
               <LanguageSelector />
-              <button 
+              <button
                 onClick={() => setMobileMenuOpen(true)}
                 className="p-2 rounded-md text-gray-700 hover:text-farm-green"
                 data-testid="mobile-menu-btn"
@@ -100,7 +105,7 @@ export default function Navigation() {
             </div>
           </div>
         </nav>
-        
+
         {/* Mobile Navigation Menu */}
         <div className={`mobile-menu md:hidden fixed inset-y-0 left-0 w-72 bg-white shadow-lg z-50 transform transition-transform duration-300 ${mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
           <div className="p-4">
@@ -109,7 +114,7 @@ export default function Navigation() {
                 <i className="fas fa-seedling text-farm-green text-2xl mr-3"></i>
                 <span className="font-bold text-lg">KP Farm</span>
               </div>
-              <button 
+              <button
                 onClick={() => setMobileMenuOpen(false)}
                 className="p-2 rounded-md text-gray-700"
                 data-testid="close-menu-btn"
@@ -117,42 +122,42 @@ export default function Navigation() {
                 <i className="fas fa-times text-xl"></i>
               </button>
             </div>
-            
+
             {/* Language Selector for Mobile */}
             <div className="mb-6 flex justify-center">
               <LanguageSelector />
             </div>
-            
+
             <nav className="space-y-3">
-              <button 
+              <button
                 onClick={() => scrollToSection('home')}
                 className="mobile-nav-link block py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-farm-green w-full text-left"
                 data-testid="mobile-nav-home"
               >
                 <i className="fas fa-home mr-3"></i>{t(translations.home)}
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('location')}
                 className="mobile-nav-link block py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-farm-green w-full text-left"
                 data-testid="mobile-nav-location"
               >
                 <i className="fas fa-map-marker-alt mr-3"></i>{t(translations.location)}
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('gallery')}
                 className="mobile-nav-link block py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-farm-green w-full text-left"
                 data-testid="mobile-nav-gallery"
               >
                 <i className="fas fa-camera mr-3"></i>{t(translations.photos)}
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('docs')}
                 className="mobile-nav-link block py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-farm-green w-full text-left"
                 data-testid="mobile-nav-docs"
               >
                 <i className="fas fa-file-alt mr-3"></i>{t(translations.documents)}
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('contact')}
                 className="mobile-nav-link block py-3 px-4 bg-farm-green text-white rounded-lg hover:bg-deep-green w-full text-left"
                 data-testid="mobile-nav-contact"
@@ -166,7 +171,7 @@ export default function Navigation() {
 
       {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
           onClick={() => setMobileMenuOpen(false)}
           data-testid="mobile-menu-overlay"
