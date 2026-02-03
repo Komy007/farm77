@@ -205,7 +205,8 @@ export const translations = {
     zh: '实际农场照片将在现场参观后更新。如需更多高分辨率照片，请联系我们。',
     km: 'រូបថតកសិដ្ឋានជាក់ស្តែងនឹងត្រូវបានធ្វើបច្ចុប្បន្នភាពបន្ទាប់ពីចុះពិនិត្យទីតាំងផ្ទាល់។ សូមទាក់ទងមកយើងខ្ញុំ ប្រសិនបើអ្នកត្រូវការរូបថតដែលមានគុណភាពច្បាស់ជាងនេះ។'
   },
-  viewGoogleMaps: { ko: '구글지도에서 보기', en: 'View on Google Maps', fr: 'Voir sur Google Maps', zh: '在谷歌地图中查看', km: 'មើលក្នុងផែនទី Google' }
+  viewGoogleMaps: { ko: '구글지도에서 보기', en: 'View on Google Maps', fr: 'Voir sur Google Maps', zh: '在谷歌地图中查看', km: 'មើលក្នុងផែនទី Google' },
+  googleMapsArea: { ko: '구글지도 영역지도', en: 'Google Maps Area Map', fr: 'Carte de Zone Google Maps', zh: '谷歌地图区域图', km: 'ផែនទីតំបន់ Google' }
 };
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {

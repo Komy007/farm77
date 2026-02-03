@@ -118,6 +118,17 @@ export default function LocationSection() {
                 <i className="fas fa-external-link-alt mr-2"></i>
                 <span className="text-xs sm:text-sm font-medium">{t(translations.viewGoogleMaps)}</span>
               </a>
+
+              <a
+                href="https://www.google.com/maps/d/u/0/edit?mid=1taugJCk278WIm5ZX_Hk3yHjTiece7Ls&usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-sky-blue hover:bg-blue-600 text-white p-3 sm:p-4 rounded-xl text-center transition-colors flex items-center justify-center"
+                data-testid="button-google-maps-area"
+              >
+                <i className="fas fa-layer-group mr-2"></i>
+                <span className="text-xs sm:text-sm font-medium">{t(translations.googleMapsArea)}</span>
+              </a>
             </div>
           </div>
         </div>
