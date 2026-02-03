@@ -124,7 +124,7 @@
 
 @layer utilities {
   .farm-hero-bg {
-    background-image: url('/farm-bg.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/farm-bg-new.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
