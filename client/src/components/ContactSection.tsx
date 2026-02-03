@@ -123,7 +123,7 @@ export default function ContactSection() {
                   <i className="fas fa-user text-golden text-lg sm:text-xl mr-3 sm:mr-4"></i>
                   <div>
                     <p className="font-semibold text-sm sm:text-base">담당자 Contact Person</p>
-                    <p className="text-xs sm:text-sm opacity-90" data-testid="text-contact-person">주 동락 (Ju DongRak)</p>
+                    <p className="text-xs sm:text-sm opacity-90" data-testid="text-contact-person">주동락/Ju DongRak</p>
                   </div>
                 </div>
               </div>
@@ -135,7 +135,7 @@ export default function ContactSection() {
                     <p className="font-semibold text-sm sm:text-base">{t(translations.phone)}</p>
                     <div className="text-xs sm:text-sm opacity-90 space-y-1">
                       <p data-testid="text-phone-kr">한국 (KR): +82 10-6562-7061</p>
-                      <p data-testid="text-phone-kh">캄보디아 (KH): +855 12-637-061</p>
+                      <p data-testid="text-phone-kh">(KH): +855-12-637-061</p>
                     </div>
                   </div>
                 </div>
@@ -148,7 +148,6 @@ export default function ContactSection() {
                     <p className="font-semibold text-sm sm:text-base">{t(translations.email)}</p>
                     <div className="text-xs sm:text-sm opacity-90 space-y-1">
                       <p data-testid="text-email-1">rak7829@daum.net</p>
-                      <p data-testid="text-email-2">cambodia.bae@gmail.com</p>
                     </div>
                   </div>
                 </div>
