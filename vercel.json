@@ -19,7 +19,7 @@
             "destination": "server/index.ts"
         },
         {
-            "source": "/((?!api|assets|generated-assets|farm-bg.jpg|.*\\.kml|.*\\.kmz).* )",
+            "source": "/((?!api|assets|generated-assets|farm-bg.jpg|.*\\.kml|.*\\.kmz).*)",
             "destination": "/index.html"
         }
     ]
