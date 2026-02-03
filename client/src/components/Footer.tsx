@@ -34,22 +34,22 @@ export default function Footer() {
               {t(translations.companyDescription)}
             </p>
             <div className="flex space-x-3 sm:space-x-4">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-gray-400 hover:text-farm-green transition-colors"
                 data-testid="link-facebook"
               >
                 <i className="fab fa-facebook text-lg sm:text-xl"></i>
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-gray-400 hover:text-farm-green transition-colors"
                 data-testid="link-instagram"
               >
                 <i className="fab fa-instagram text-lg sm:text-xl"></i>
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-gray-400 hover:text-farm-green transition-colors"
                 data-testid="link-linkedin"
               >
@@ -57,33 +57,33 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          
+
           {/* Quick Links */}
           <div>
             <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">{t(translations.quickLinks)}</h4>
             <div className="space-y-1 sm:space-y-2">
-              <button 
+              <button
                 onClick={() => scrollToSection('home')}
                 className="block text-gray-400 hover:text-white transition-colors text-left text-sm sm:text-base"
                 data-testid="footer-link-home"
               >
                 {t(translations.home)}
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('location')}
                 className="block text-gray-400 hover:text-white transition-colors text-left text-sm sm:text-base"
                 data-testid="footer-link-location"
               >
                 {t(translations.location)}
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('gallery')}
                 className="block text-gray-400 hover:text-white transition-colors text-left text-sm sm:text-base"
                 data-testid="footer-link-gallery"
               >
                 {t(translations.photos)}
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('contact')}
                 className="block text-gray-400 hover:text-white transition-colors text-left text-sm sm:text-base"
                 data-testid="footer-link-contact"
@@ -92,23 +92,23 @@ export default function Footer() {
               </button>
             </div>
           </div>
-          
+
           {/* Contact Info */}
           <div>
             <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">연락처 Contact</h4>
             <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-gray-400">
-              <p><strong>담당자:</strong> Mr. Bae KY.</p>
-              <p><strong>전화:</strong> +855 95 779 873</p>
-              <p><strong>이메일:</strong> cambodia.bae@gmail.com</p>
-              <p><strong>WhatsApp:</strong> +855 95 779 873</p>
+              <p><strong>담당자:</strong> 주동락/Ju DongRak</p>
+              <p><strong>전화:</strong> 한국 (KR): +82 10-6562-7061, (KH): +855 12-637-061</p>
+              <p><strong>이메일:</strong> rak7829@daum.net</p>
+              <p><strong>WhatsApp:</strong> +855 95-779-873</p>
               <p className="mt-3 sm:mt-4">
-                <a href="mailto:cambodia.bae@gmail.com" className="hover:text-white transition-colors" data-testid="footer-link-email">이메일 문의</a> |{' '}
+                <a href="mailto:rak7829@daum.net" className="hover:text-white transition-colors" data-testid="footer-link-email">이메일 문의</a> |{' '}
                 <a href="https://wa.me/85595779873" className="hover:text-white transition-colors" data-testid="footer-link-whatsapp">WhatsApp 문의</a>
               </p>
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-800 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-gray-400">
           <p data-testid="text-copyright">
             &copy; <span>{currentYear}</span> 깜퐁츠낭 77헥타르 농장. All rights reserved. | Kampong Chhnang 77-Hectare Farm
