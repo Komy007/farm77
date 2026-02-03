@@ -13,17 +13,14 @@
             }
         }
     ],
-    "routes": [
+    "rewrites": [
         {
-            "src": "/api/(.*)",
-            "dest": "server/index.ts"
+            "source": "/api/(.*)",
+            "destination": "server/index.ts"
         },
         {
-            "handle": "filesystem"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/index.html"
+            "source": "/((?!api|assets|generated-assets|farm-bg.jpg|.*\\.kml|.*\\.kmz).* )",
+            "destination": "/index.html"
         }
     ]
 }
