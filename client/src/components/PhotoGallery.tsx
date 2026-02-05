@@ -253,15 +253,7 @@ export default function PhotoGallery() {
       titleFr: 'Route d\'accès à la ferme'
     },
     // 지도 이미지들
-    {
-      id: 12,
-      category: 'maps',
-      src: googleMapRoute,
-      alt: 'Tang Krasang에서 프놈펜까지 경로',
-      title: '프놈펜 경로 지도',
-      subtitle: 'Route Map to Phnom Penh',
-      titleFr: 'Carte de route vers Phnom Penh'
-    },
+
     {
       id: 13,
       category: 'maps',
@@ -271,15 +263,7 @@ export default function PhotoGallery() {
       subtitle: 'Farm Location Map',
       titleFr: 'Carte de localisation de la ferme'
     },
-    {
-      id: 14,
-      category: 'maps',
-      src: googleMapLocation,
-      alt: '구글 지도 위치',
-      title: '구글 지도 위치',
-      subtitle: 'Google Maps Location',
-      titleFr: 'Localisation Google Maps'
-    },
+
     {
       id: 15,
       category: 'maps',
