@@ -144,10 +144,10 @@ export default function PhotoGallery() {
       id: 204,
       category: 'fruits',
       src: farmFruit4,
-      alt: '농장 과일 - 대추야자',
-      title: '대추야자',
-      subtitle: 'Date Palm',
-      titleFr: 'Palmier Dattier'
+      alt: '농장 과일 - 코코넛',
+      title: '코코넛',
+      subtitle: 'Coconut',
+      titleFr: 'Noix de Coco'
     },
     {
       id: 205,
@@ -162,10 +162,10 @@ export default function PhotoGallery() {
       id: 206,
       category: 'fruits',
       src: farmFruit6,
-      alt: '농장 과일 - 팜 슈거',
-      title: '팜 슈거',
-      subtitle: 'Palm Sugar',
-      titleFr: 'Sucre de Palme'
+      alt: '농장 과일 - 대추야자',
+      title: '대추야자',
+      subtitle: 'Date Palm',
+      titleFr: 'Palmier Dattier'
     },
     // 온천 사진들
     {
