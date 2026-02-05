@@ -25,6 +25,8 @@ import farmFruit1 from '@assets/farm_fruit_1.jpg';
 import farmFruit2 from '@assets/farm_fruit_2.jpg';
 import farmFruit3 from '@assets/farm_fruit_3.jpg';
 import farmFruit4 from '@assets/farm_fruit_4.jpg';
+import farmFruit5 from '@assets/farm_fruit_5.jpg';
+import farmFruit6 from '@assets/farm_fruit_6.jpg';
 
 export default function PhotoGallery() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -140,6 +142,24 @@ export default function PhotoGallery() {
       title: '대추야자',
       subtitle: 'Date Palm',
       titleFr: 'Palmier Dattier'
+    },
+    {
+      id: 205,
+      category: 'fruits',
+      src: farmFruit5,
+      alt: '농장 과일 - 두리안',
+      title: '두리안',
+      subtitle: 'Durian',
+      titleFr: 'Durian'
+    },
+    {
+      id: 206,
+      category: 'fruits',
+      src: farmFruit6,
+      alt: '농장 과일 - 팜 슈거',
+      title: '팜 슈거',
+      subtitle: 'Palm Sugar',
+      titleFr: 'Sucre de Palme'
     },
     // 지상 농작물 사진들
     {
