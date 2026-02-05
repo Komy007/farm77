@@ -8,6 +8,20 @@ export default function DocumentsSection() {
   const [showBackSide, setShowBackSide] = useState(false);
   const { t } = useLanguage();
 
+  // 광물 지도 정보
+  const mineralMaps = [
+    {
+      src: mineralMap1,
+      title: "캄보디아 광물 자원 지도",
+      description: "Cambodia Mineral Resources Map"
+    },
+    {
+      src: mineralMap2,
+      title: "농장 주변 광물 분포도",
+      description: "Mineral Distribution around Farm"
+    }
+  ];
+
   // 앞면 이미지 정보
   const frontImages = [
     {
