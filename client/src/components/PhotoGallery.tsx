@@ -27,6 +27,10 @@ import farmFruit3 from '@assets/farm_fruit_3.jpg';
 import farmFruit4 from '@assets/farm_fruit_4.jpg';
 import farmFruit5 from '@assets/farm_fruit_5.jpg';
 import farmFruit6 from '@assets/farm_fruit_6.jpg';
+import hotSpring1 from '@assets/a1.jpg';
+import hotSpring2 from '@assets/a2.jpg';
+import hotSpring3 from '@assets/a3.jpg';
+import hotSpring4 from '@assets/a4.jpg';
 
 export default function PhotoGallery() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -161,6 +165,43 @@ export default function PhotoGallery() {
       subtitle: 'Palm Sugar',
       titleFr: 'Sucre de Palme'
     },
+    // 온천 사진들
+    {
+      id: 301,
+      category: 'hotSprings',
+      src: hotSpring1,
+      alt: '온천 전경',
+      title: '자연 온천',
+      subtitle: 'Natural Hot Spring',
+      titleFr: 'Source Thermale Naturelle'
+    },
+    {
+      id: 302,
+      category: 'hotSprings',
+      src: hotSpring2,
+      alt: '온천 시설',
+      title: '온천 휴양 시설',
+      subtitle: 'Hot Spring Resort Facility',
+      titleFr: 'Installation de Station Thermale'
+    },
+    {
+      id: 303,
+      category: 'hotSprings',
+      src: hotSpring3,
+      alt: '온천 탕',
+      title: '노천 온천',
+      subtitle: 'Open-air Bath',
+      titleFr: 'Bain en Plein Air'
+    },
+    {
+      id: 304,
+      category: 'hotSprings',
+      src: hotSpring4,
+      alt: '온천 조경',
+      title: '온천 정원',
+      subtitle: 'Hot Spring Garden',
+      titleFr: 'Jardin Thermal'
+    },
     // 지상 농작물 사진들
     {
       id: 9,
@@ -232,6 +273,7 @@ export default function PhotoGallery() {
 
   const filters = [
     { key: 'all', label: t(translations.allPhotos) },
+    { key: 'hotSprings', label: t(translations.hotSprings) },
     { key: 'aerial', label: t(translations.aerial) },
     { key: 'fruits', label: t(translations.fruits) },
     { key: 'ground', label: t(translations.ground) },

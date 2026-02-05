@@ -158,6 +158,7 @@ export const translations = {
   generalInquiry: { ko: '일반 문의', en: 'General Inquiry', fr: 'Demande Générale', zh: '一般咨询', km: 'សំណួរទូទៅ' },
   mineralMap: { ko: '캄보디아 광물 지도', en: 'Cambodia Mineral Map', fr: 'Carte Minière du Cambodge', zh: '柬埔寨矿产地图', km: 'ផែនទីរ៉ែនៅកម្ពុជា' },
   mineralMapDesc: { ko: '캄보디아 등 주요 광물 자원 분포 지도', en: 'Map of Major Mineral Resources in Cambodia', fr: 'Carte des principales ressources minérales au Cambodge', zh: '柬埔寨主要矿产资源分布图', km: 'ផែនទីនៃធនធានរ៉ែសំខាន់ៗនៅកម្ពុជា' },
+  hotSprings: { ko: '온천', en: 'Hot Springs', fr: 'Sources Thermales', zh: '温泉', km: 'ទឹកពុះ' },
   privacyAgreement: {
     ko: '개인정보 처리방침에 동의합니다.',
     en: 'I agree to the privacy policy.',
