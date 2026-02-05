@@ -36,6 +36,7 @@ import mineralMap2 from '@assets/mineralMAP2.jpg';
 
 export default function PhotoGallery() {
   const [activeFilter, setActiveFilter] = useState('all');
+  const [selectedPhoto, setSelectedPhoto] = useState<any>(null);
   const { t } = useLanguage();
 
   const photos = [
@@ -340,8 +341,9 @@ export default function PhotoGallery() {
                 <img
                   src={photo.src}
                   alt={photo.alt}
-                  className="w-full h-40 sm:h-48 object-cover"
+                  className="w-full h-40 sm:h-48 object-cover cursor-pointer transition-transform hover:scale-105"
                   loading="lazy"
+                  onClick={() => setSelectedPhoto(photo)}
                 />
                 <div className="p-3 sm:p-4">
                   <h3 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base" data-testid={`photo-title-${photo.id}`}>
@@ -365,6 +367,37 @@ export default function PhotoGallery() {
           </div>
         </div>
       </div>
-    </section>
+
+      {/* Lightbox Modal */}
+      {
+        selectedPhoto && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4"
+            onClick={() => setSelectedPhoto(null)}
+          >
+            <button
+              className="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 focus:outline-none"
+              onClick={() => setSelectedPhoto(null)}
+            >
+              &times;
+            </button>
+            <div
+              className="relative max-w-5xl max-h-screen w-full flex flex-col items-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={selectedPhoto.src}
+                alt={selectedPhoto.alt}
+                className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl mb-4"
+              />
+              <div className="text-center text-white">
+                <h3 className="text-xl sm:text-2xl font-bold mb-2">{selectedPhoto.title}</h3>
+                <p className="text-sm sm:text-base text-gray-300">{selectedPhoto.subtitle}</p>
+              </div>
+            </div>
+          </div>
+        )
+      }
+    </section >
   );
 }

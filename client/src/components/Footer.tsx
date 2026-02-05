@@ -97,7 +97,7 @@ export default function Footer() {
           <div>
             <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">연락처 Contact</h4>
             <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-gray-400">
-              <p><strong>담당자:</strong> 주동락/Ju DongRak</p>
+              <p><strong>담당자:</strong> 주동락/Joo Dong Rak</p>
               <p><strong>전화:</strong> 한국 (KR): +82 10-6562-7061, (KH): +855-12-637-061</p>
               <p><strong>이메일:</strong> rak7829@daum.net</p>
               <p><strong>WhatsApp:</strong> +855 95-779-873</p>

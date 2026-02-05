@@ -123,7 +123,7 @@ export default function ContactSection() {
                   <i className="fas fa-user text-golden text-lg sm:text-xl mr-3 sm:mr-4"></i>
                   <div>
                     <p className="font-semibold text-sm sm:text-base">담당자 Contact Person</p>
-                    <p className="text-xs sm:text-sm opacity-90" data-testid="text-contact-person">주동락/Ju DongRak</p>
+                    <p className="text-xs sm:text-sm opacity-90" data-testid="text-contact-person">주동락/Joo Dong Rak</p>
                   </div>
                 </div>
               </div>
