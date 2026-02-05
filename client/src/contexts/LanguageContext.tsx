@@ -36,11 +36,11 @@ export const translations = {
 
   // Hero Section
   heroTitle: {
-    ko: '77헥타르 프리미엄 농장',
-    en: '77-Hectare Premium Farm',
-    fr: 'Ferme Premium de 77 Hectares',
-    zh: '77公顷精品农场',
-    km: 'កសិដ្ឋានលំដាប់ខ្ពស់ទំហំ ៧៧ ហិកតា'
+    ko: 'Dream Farm & 온천 리조트',
+    en: 'Dream Farm & Hot Spring Resort',
+    fr: 'Dream Farm & Station Thermale',
+    zh: 'Dream Farm & 温泉度假村',
+    km: 'Dream Farm & រមណីយដ្ឋានទឹកក្តៅ'
   },
   heroLocation: {
     ko: '캄보디아 깜퐁츠낭성 당끄라상 지역',
@@ -95,6 +95,7 @@ export const translations = {
   allPhotos: { ko: '전체', en: 'All Photos', fr: 'Toutes Photos', zh: '全部', km: 'ទាំងអស់' },
   aerial: { ko: '항공사진', en: 'Aerial', fr: 'Aérienne', zh: '航拍', km: 'រូបថតពីលើអាកាស' },
   ground: { ko: '지상사진', en: 'Ground', fr: 'Sol', zh: '实拍', km: 'រូបថតផ្ទាល់ដី' },
+  fruits: { ko: '농장과일', en: 'Farm Fruits', fr: 'Fruits de la Ferme', zh: '农场水果', km: 'ផ្លែឈើកសិដ្ឋាន' },
   maps: { ko: '지도', en: 'Maps', fr: 'Cartes', zh: '地图', km: 'ផែនទី' },
 
   // Documents Section

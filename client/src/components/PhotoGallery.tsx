@@ -20,6 +20,12 @@ import googleMapRoute2 from '@assets/Land_Goole_Map_1755152754498.png';
 import landMapImage from '@assets/Map_Land_1755151005817.jpeg';
 import googleMapLocation from '@assets/Land_Goole_Map_1755151005817.png';
 
+// 과일 이미지들 import (플레이스홀더)
+import farmFruit1 from '@assets/farm_fruit_1.jpg';
+import farmFruit2 from '@assets/farm_fruit_2.jpg';
+import farmFruit3 from '@assets/farm_fruit_3.jpg';
+import farmFruit4 from '@assets/farm_fruit_4.jpg';
+
 export default function PhotoGallery() {
   const [activeFilter, setActiveFilter] = useState('all');
   const { t } = useLanguage();
@@ -98,6 +104,43 @@ export default function PhotoGallery() {
       subtitle: 'Natural Tree Conservation',
       titleFr: 'Conservation des arbres naturels'
     },
+    // 농장 과일 사진들
+    {
+      id: 201,
+      category: 'fruits',
+      src: farmFruit1,
+      alt: '농장 과일 - 패션프루트',
+      title: '신선한 패션프루트',
+      subtitle: 'Fresh Passion Fruit',
+      titleFr: 'Fruit de la passion frais'
+    },
+    {
+      id: 202,
+      category: 'fruits',
+      src: farmFruit2,
+      alt: '농장 과일 - 망고',
+      title: '프리미엄 망고',
+      subtitle: 'Premium Mango',
+      titleFr: 'Mangue Premium'
+    },
+    {
+      id: 203,
+      category: 'fruits',
+      src: farmFruit3,
+      alt: '농장 과일 - 망고 나무',
+      title: '망고 나무',
+      subtitle: 'Mango Tree',
+      titleFr: 'Manguier'
+    },
+    {
+      id: 204,
+      category: 'fruits',
+      src: farmFruit4,
+      alt: '농장 과일 - 대추야자',
+      title: '대추야자',
+      subtitle: 'Date Palm',
+      titleFr: 'Palmier Dattier'
+    },
     // 지상 농작물 사진들
     {
       id: 9,
@@ -170,6 +213,7 @@ export default function PhotoGallery() {
   const filters = [
     { key: 'all', label: t(translations.allPhotos) },
     { key: 'aerial', label: t(translations.aerial) },
+    { key: 'fruits', label: t(translations.fruits) },
     { key: 'ground', label: t(translations.ground) },
     { key: 'maps', label: t(translations.maps) }
   ];
@@ -194,8 +238,8 @@ export default function PhotoGallery() {
               key={filter.key}
               onClick={() => setActiveFilter(filter.key)}
               className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors ${activeFilter === filter.key
-                  ? 'bg-farm-green text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                ? 'bg-farm-green text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                 }`}
               data-testid={`filter-${filter.key}`}
             >
