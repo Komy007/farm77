@@ -50,11 +50,11 @@ export const translations = {
     km: 'តំបន់តាំងក្រសាំង ខេត្តកំពង់ឆ្នាំង កម្ពុជា'
   },
   totalArea: { ko: '총면적', en: 'Total Area', fr: 'Surface Totale', zh: '总面积', km: 'ផ្ទៃដីសរុប' },
-  totalAreaValue: { ko: '77.0637 헥타르', en: '77.0637 Hectares', fr: '77.0637 Hectares', zh: '77.0637 公顷', km: '៧៧.០៦៣៧ ហិកតា' },
+  totalAreaValue: { ko: '760,093 평방미터', en: '760,093 m²', fr: '760 093 m²', zh: '760,093 平方米', km: '៧៦០,០៩៣ ម៉ែត្រការ៉េ' },
   fromPhnomPenh: { ko: '프놈펜에서', en: 'From Phnom Penh', fr: 'De Phnom Penh', zh: '距金边', km: 'ពីភ្នំពេញ' },
   distanceValue: { ko: '86km 거리', en: '86km distance', fr: '86km de distance', zh: '86公里距离', km: 'ចម្ងាយ ៨៦ គីឡូម៉ែត្រ' },
   duration: { ko: '소요시간', en: 'Duration', fr: 'Durée', zh: '耗时', km: 'រយៈពេល' },
-  durationValue: { ko: '1시간 47분', en: '1 hour 47 minutes', fr: '1h 47min', zh: '1小时47分钟', km: '១ ម៉ោង ៤៧ នាទី' },
+  durationValue: { ko: '1시간 30분', en: '1 hour 30 minutes', fr: '1h 30min', zh: '1小时30分钟', km: '១ ម៉ោង ៣០ នាទី' },
   viewLocation: { ko: '위치 보기', en: 'View Location', fr: 'Voir Emplacement', zh: '查看位置', km: 'មើលទីតាំង' },
   contactUs: { ko: '문의하기', en: 'Contact Us', fr: 'Nous Contacter', zh: '联系我们', km: 'ទាក់ទងមកយើង' },
 
