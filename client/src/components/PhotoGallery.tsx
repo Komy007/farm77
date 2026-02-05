@@ -31,6 +31,8 @@ import hotSpring1 from '@assets/a1.jpg';
 import hotSpring2 from '@assets/a2.jpg';
 import hotSpring3 from '@assets/a3.jpg';
 import hotSpring4 from '@assets/a4.jpg';
+import mineralMap1 from '@assets/mineralMAP1.jpg';
+import mineralMap2 from '@assets/mineralMAP2.jpg';
 
 export default function PhotoGallery() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -202,6 +204,25 @@ export default function PhotoGallery() {
       subtitle: 'Hot Spring Garden',
       titleFr: 'Jardin Thermal'
     },
+    // 광물 지도
+    {
+      id: 401,
+      category: 'mineralMaps',
+      src: mineralMap1,
+      alt: '캄보디아 광물 지도 1',
+      title: '캄보디아 광물 자원 지도',
+      subtitle: 'Cambodia Mineral Resources Map',
+      titleFr: 'Carte des Ressources Minérales'
+    },
+    {
+      id: 402,
+      category: 'mineralMaps',
+      src: mineralMap2,
+      alt: '캄보디아 광물 지도 2',
+      title: '주요 광물 분포도',
+      subtitle: 'Major Mineral Distribution',
+      titleFr: 'Distribution des Minéraux Principaux'
+    },
     // 지상 농작물 사진들
     {
       id: 9,
@@ -274,6 +295,7 @@ export default function PhotoGallery() {
   const filters = [
     { key: 'all', label: t(translations.allPhotos) },
     { key: 'hotSprings', label: t(translations.hotSprings) },
+    { key: 'mineralMaps', label: t(translations.mineralMap) },
     { key: 'aerial', label: t(translations.aerial) },
     { key: 'fruits', label: t(translations.fruits) },
     { key: 'ground', label: t(translations.ground) },
