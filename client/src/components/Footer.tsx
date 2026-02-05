@@ -111,7 +111,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-gray-400">
           <p data-testid="text-copyright">
-            &copy; <span>{currentYear}</span> 깜퐁츠낭 77헥타르 농장. All rights reserved. | Kampong Chhnang 77-Hectare Farm
+            &copy; <span>{currentYear}</span> Dream Farm & 온천 리조트. All rights reserved. | Dream Farm & Hot Spring Resort
           </p>
         </div>
       </div>
