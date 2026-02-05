@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useLanguage, translations } from '@/contexts/LanguageContext';
+import mineralMap1 from '@assets/mineralMAP1.jpg';
+import mineralMap2 from '@assets/mineralMAP2.jpg';
 
 export default function DocumentsSection() {
   const [selectedDoc, setSelectedDoc] = useState<string | null>(null);
@@ -147,6 +149,23 @@ export default function DocumentsSection() {
               {t(translations.documentCategories)}
             </h3>
 
+            {/* Mineral Map Documents (Top Priority) */}
+            <div className="bg-gradient-to-r from-amber-600 to-amber-800 text-white p-4 sm:p-6 rounded-xl cursor-pointer hover:shadow-lg transition-all" onClick={() => setSelectedDoc('mineralMap')}>
+              <div className="flex items-center mb-3 sm:mb-4">
+                <i className="fas fa-gem text-xl sm:text-2xl mr-2 sm:mr-3"></i>
+                <h4 className="text-base sm:text-lg font-semibold">{t(translations.mineralMap)}</h4>
+              </div>
+              <div className="space-y-2 text-xs sm:text-sm">
+                <div className="flex items-center">
+                  <i className="fas fa-check-circle mr-2 text-yellow-300"></i>
+                  <span>{t(translations.mineralMapDesc)}</span>
+                </div>
+              </div>
+              <div className="mt-3 text-xs opacity-75">
+                <i className="fas fa-mouse-pointer mr-1"></i>{t(translations.clickToView)}
+              </div>
+            </div>
+
             {/* Land Title Documents */}
             <div className="bg-gradient-to-r from-farm-green to-deep-green text-white p-4 sm:p-6 rounded-xl cursor-pointer hover:shadow-lg transition-all" onClick={() => setSelectedDoc('landTitle')}>
               <div className="flex items-center mb-3 sm:mb-4">
@@ -200,7 +219,42 @@ export default function DocumentsSection() {
 
             <div className="bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
               {/* Document Viewer */}
-              {selectedDoc === 'landTitle' ? (
+              {selectedDoc === 'mineralMap' ? (
+                <div className="bg-white p-4">
+                  <div className="mb-4">
+                    <h4 className="font-bold text-lg text-gray-900 mb-1">{t(translations.mineralMap)}</h4>
+                    <p className="text-sm text-gray-600">{t(translations.mineralMapDesc)}</p>
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-4 max-h-96 overflow-y-auto">
+                    {mineralMaps.map((image, index) => (
+                      <div key={index} className="space-y-2">
+                        <img
+                          src={image.src}
+                          alt={`광물 지도 ${index + 1}`}
+                          className="w-full h-auto border rounded-lg shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+                          onClick={() => handleImageClick(image.src)}
+                        />
+                        <div className="text-xs text-gray-500 text-center space-y-1">
+                          <p className="font-semibold">{image.title}</p>
+                          <p>{image.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-4 p-3 bg-amber-50 rounded-lg">
+                    <h5 className="font-semibold text-amber-800 mb-2">
+                      <i className="fas fa-info-circle mr-2"></i>
+                      {t(translations.docViewer)}
+                    </h5>
+                    <div className="text-sm text-amber-700">
+                      <p className="font-medium mb-1">• 캄보디아 전역 광물 자원 분포 확인</p>
+                      <p className="font-medium mb-1">• 금, 보석, 희토류 등 자원 현황</p>
+                    </div>
+                  </div>
+                </div>
+              ) : selectedDoc === 'landTitle' ? (
                 <div className="bg-white p-4">
                   <div className="mb-4">
                     <div className="flex items-center justify-between mb-3">
@@ -349,14 +403,16 @@ export default function DocumentsSection() {
                 <div className="flex items-center justify-between">
                   <div>
                     <h4 className="font-semibold text-gray-900 text-sm sm:text-base">
-                      {selectedDoc === 'landTitle' ? '토지 소유권 증서 (Land Title Certificate)' :
-                        selectedDoc === 'survey' ? '측량 문서 (Survey Documents)' :
-                          '문서를 선택해주세요'}
+                      {selectedDoc === 'mineralMap' ? t(translations.mineralMap) :
+                        selectedDoc === 'landTitle' ? '토지 소유권 증서 (Land Title Certificate)' :
+                          selectedDoc === 'survey' ? '측량 문서 (Survey Documents)' :
+                            '문서를 선택해주세요'}
                     </h4>
                     <p className="text-xs sm:text-sm text-gray-600">
-                      {selectedDoc === 'landTitle' ? '캄보디아 정부 발행 공식 토지 증서' :
-                        selectedDoc === 'survey' ? '정밀 측량을 통한 토지 경계 확정 문서' :
-                          '왼쪽에서 문서 카테고리를 선택하세요'}
+                      {selectedDoc === 'mineralMap' ? t(translations.mineralMapDesc) :
+                        selectedDoc === 'landTitle' ? '캄보디아 정부 발행 공식 토지 증서' :
+                          selectedDoc === 'survey' ? '정밀 측량을 통한 토지 경계 확정 문서' :
+                            '왼쪽에서 문서 카테고리를 선택하세요'}
                     </p>
                   </div>
                   {selectedDoc && (
